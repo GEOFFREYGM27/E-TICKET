@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .ticket {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        
+        .ticket h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .ticket p {
+            margin: 10px 0;
+        }
+        
+        .ticket .contact {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .ticket .contact p {
+            margin: 5px 0;
+        }
+
+        /* Style for the form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket" id="ticket">
+        <h1>E-Ticket</h1>
+        <p>Name: <span id="passengerName"></span></p>
+        <p>Journey Details: <span id="journeyDetails"></span></p>
+        <p>Seat Number: <span id="seatNumber"></span></p>
+    
+        <div class="contact">
+            <h3>Contact Information</h3>
+            <p>Email: <span id="email"></span></p>
+            <p>Phone: <span id="phone"></span></p>
+        </div>
+    </div>
+         <script>
+        const passengerName = "Geoffrey mushipi";
+        const journeyDetails = "Likili bus";
+        const seatNumber = "A12";
+        const email = "Geoffrey.doe@example.com";
+        const phone = "+260 971114837";
+        
+        document.getElementById("passengerName").textContent = passengerName;
+        document.getElementById("journeyDetails").textContent = journeyDetails;
+        document.getElementById("seatNumber").textContent = seatNumber;
+        document.getElementById("email").textContent = email;
+        document.getElementById("phone").textContent = phone;
+        // Add similar lines for other fields like seatNumber, email, and phone
+    </script>
+
+    <form id="userDetailsForm">
+        <label for="passengerNameInput">Name:</label>
+        <input type="text" id="passengerNameInput" placeholder="Enter your name">
+
+        <label for="journeyDetailsInput">Journey Details:</label>
+        <input type="text" id="journeyDetailsInput" placeholder="Enter journey details">
+
+        <label for="seatNumberInput">Seat Number:</label>
+        <input type="text" id="seatNumberInput" placeholder="Enter seat number">
+
+        <label for="emailInput">Email:</label>
+        <input type="email" id="emailInput" placeholder="Enter your email">
+
+        <label for="phoneInput">Phone:</label>
+        <input type="tel" id="phoneInput" placeholder="Enter your phone number">
+
+        <button type="button" onclick="updateTicket()">Generate E-Ticket</button>
+    </form>
+
+    <script>
+        function updateTicket() {
+            const passengerName = document.getElementById("passengerNameInput").value;
+            const journeyDetails = document.getElementById("journeyDetailsInput").value;
+            const seatNumber = document.getElementById("seatNumberInput").value;
+            const email = document.getElementById("emailInput").value;
+            const phone = document.getElementById("phoneInput").value;
+
+            document.getElementById("passengerName").textContent = passengerName;
+            document.getElementById("journeyDetails").textContent = journeyDetails;
+            document.getElementById("seatNumber").textContent = seatNumber;
+            document.getElementById("email").textContent = email;
+            document.getElementById("phone").textContent = phone;
+        }
+    </script>
+</body>
+</html>
