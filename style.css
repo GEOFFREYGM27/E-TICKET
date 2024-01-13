@@ -1,0 +1,28 @@
+ body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .ticket {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .ticket h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .ticket p {
+            margin: 10px 0;
+        }
+        
+        .ticket .contact {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .ticket .contact p {
+            margin: 5px 0;
+        }
